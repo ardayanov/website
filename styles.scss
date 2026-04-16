@@ -1,0 +1,61 @@
+@font-face {
+  font-family: 'Golos';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/fonts/golos/regular.woff2') format('woff2'), url('/fonts/golos/regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Golos';
+  font-style: normal;
+  font-weight: bold;
+  src: url('/fonts/golos/demi-bold.woff2') format('woff2'), url('/fonts/golos/demi-bold.woff') format('woff');
+}
+
+html {
+  height: 100%;
+  min-height: 100%;
+
+  body {
+    height: 100%;
+    min-height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Golos, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: hsl(0deg 0% 20%);
+  }
+}
+
+.info {
+  display: grid;
+  gap: 0 10px;
+  grid-template-columns: max-content 1fr;
+  grid-template-rows: max-content max-content;
+
+  img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    grid-column: 1;
+    grid-row: 1 / -1;
+    box-shadow: 0 0 10px hsl(0deg 0% 0% / 10%)
+  }
+
+  h1 {
+    color: hsl(0deg 0% 100%);
+    font-size: 20px;
+    grid-column: 2;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+  }
+
+  div {
+    color: hsl(0deg 0% 65%);
+    font-size: 15px;
+    grid-column: 2;
+  }
+}
